@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Wayou">
+    <meta name="description" content="hichat | a simple chat application built with node.js and websocket">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PumpFun Token Calls</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .footer-text {
+            font-size: 12px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .footer-text {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-image: url('ss.gif'); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="wrapper" style="color: #fff; font-family: 'Arial', sans-serif; text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">
+        <div class="banner">
+            <h1 style="font-family: 'Orbitron', sans-serif; font-size: 48px; text-transform: uppercase; letter-spacing: 2px; background: linear-gradient(135deg, #fff, #0be74d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); animation: pulse 2s infinite;">
+                PYFE
+            </h1>
+            <span id="status"></span>
+            <nav style="display: flex; flex-direction: column;">
+                <nav>
+                    <ul>
+                        <li><a href="roadmap.html" style="display: inline-block; padding: 10px 20px; background-color: #0be74d; color: #fff; text-decoration: none; border-radius: 5px;">Roadmap</a></li>
+
+                     
+                    </ul>
+                </nav>
+                
+            
+        </div>
+        <div id="historyMsg" style="background-color: #fff; color: #000;">
+        </div>
+        <div class="controls">
+            <div class="items">
+                <input id="colorStyle" type="color" title="Font Color" style="margin-right: 10px; cursor: pointer; padding: 5px 10px; background-color: #07e275; color: #fff; border: none; border-radius: 5px;">
+                <input id="emoji" type="button" value="Emoji" title="Emoji" style="margin-right: 10px; cursor: pointer; padding: 5px 10px; background-color: #07e275; color: #fff; border: none; border-radius: 5px;">
+                <label for="sendImage" class="imageLabel" style="margin-right: 10px; cursor: pointer; display: inline-block; padding: 5px 10px; background-color: #07e275; color: #fff; border-radius: 5px;">
+                    Upload Image
+                    <input id="sendImage" type="file" accept="image/*" style="display: none;">
+                </label>
+                <img src="SS.GIF" alt="PumpFun Calls Logo" style="position: absolute; top: 110px; right: 299px; width: 100px; height: auto; animation: logoAnimation 2s infinite;">
+                <input id="clearBtn" type="button" value="Clear" title="Clear Screen" style="margin-right: 10px; padding: 5px 10px; background-color: #16ca61; color: #fff; border: none; padding: 5px 10px; cursor: pointer;">
+                <button id="createAdsBtn" style="background-color: #f61c1c; color: #fff;top: 20px; border: none; padding: 5px 10px; cursor: pointer;">Free Ads</button>
+            </div>
+            <textarea id="messageInput" placeholder="Enter to Send" style="width: 90%; max-width: 500px; height: 60px; padding: 10px; font-size: 18px; border: none; border-radius: 30px; background-color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; color: #000;"></textarea>
+            <input id="sendBtn" type="button" value="SEND" style="width: 74px; height: 33px; font-size: 18px; border: none; border-radius: 30px; background-color: #00fd4c; color: #fff; cursor: pointer;">
+            <div id="emojiWrapper"></div>
+            <div id="newTokenCalls"></div>
+            <div id="loginWrapper">
+                <div id="nickWrapper">
+                    <input type="text" placeholder="Nickname" id="nicknameInput" style="padding: 10px 20px; font-size: 14px; border: none; background-color: #fff; color: #000; cursor: pointer; margin-bottom: 20px;">
+                    <input type="button" value="OK" id="loginBtn" style="background-color: #1cb0f6; color: #fff; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer;">
+                </div>
+            </div>
+        </div>
+        <footer style="position: fixed; bottom: 20px; left: 80%; transform: translateX(-50%); text-align: center; color: #fff;">
+            <small class="footer-text">Join Us <a href="https://t.me/PythonFe" style="color: #1cb0f6; text-decoration: none;">Telegram</a></small>
+            <br>
+            <footer style="position: fixed; bottom: 0px; left: -300%; transform: translateX(-50%); text-align: center; color: #fff;">
+                <small class="footer-text">Buy<a href="https://www.pump.fun/board" style="color: #1cb0f6; text-decoration: none;">PYFE</a></small>
+                <br>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/hichat.js"></script>
+</body>
+</html>

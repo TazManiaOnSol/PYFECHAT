@@ -1,0 +1,233 @@
+/* Reset styles */
+html, body {
+    margin: 0;
+    background-color: #000; /* Change background color to black */
+    font-family: 'Orbitron', sans-serif; /* Apply a futuristic font */
+    color: #fff; /* Change default text color to white */
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 48px;
+    color: #1cb0f6; /* Change banner text color to cyan */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Apply neon shadow effect */
+}
+
+/* Login Wrapper */
+#loginWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Nick Wrapper */
+#nickWrapper {
+    text-align: center;
+}
+
+#nickWrapper input[type="text"],
+#nickWrapper input[type="button"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #1cb0f6; /* Change input background color to cyan */
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Apply neon shadow effect */
+}
+
+/* Controls */
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items {
+    margin-bottom: 20px;
+}
+
+/* Message Input */
+#messageInput {
+    width: 90%;
+    max-width: 500px;
+    height: 60px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff; /* Change input background color to white */
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    color: #333; /* Change input text color */
+}
+
+#messageInput:focus {
+    background-color: #eee; /* Change input background color on focus */
+}
+
+/* Send Button */
+#sendBtn, #createAdsBtn {
+    width: 52px;
+    height: 51px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: #1cb0f6; /* Change button background color to cyan */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Apply neon shadow effect */
+}
+
+#sendBtn:hover, #createAdsBtn:hover {
+    background-color: #0f84b5; /* Change button background color on hover */
+}
+
+/* Emoji Wrapper */
+#emojiWrapper {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+@keyframes logoAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Message Container */
+/* Message Container */
+#historyMsg {
+    width: 90%;
+    max-width: 600px;
+    height: 300px;
+    padding: 20px; /* Increase padding for a futuristic look */
+    background-color: #000; /* Change chat container background color to black */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-radius: 20px; /* Add border radius for a softer look */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+    position: relative; /* Position for the neon effect */
+}
+
+/* Message Container */
+#historyMsg {
+    width: 90%;
+    max-width: 600px;
+    height: 300px;
+    padding: 20px; /* Increase padding for a futuristic look */
+    background-color: #000; /* Change chat container background color to black */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-radius: 20px; /* Add border radius for a softer look */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+    position: relative; /* Position for the neon effect */
+}
+
+#historyMsg:before,
+#historyMsg:after {
+    content: ''; /* Add pseudo-elements for the neon effect */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; /* Adjust width to control the size of the neon */
+    background: #1cb0f6; /* Neon color */
+}
+
+#historyMsg:before {
+    left: 0;
+    border-radius: 20px 0 0 20px; /* Adjust border radius for the left side */
+}
+
+#historyMsg:after {
+    right: 0;
+    border-radius: 0 20px 20px 0; /* Adjust border radius for the right side */
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff; /* Change footer text color to white */
+}
+
+footer a {
+    color: #1cb0f6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0f84b5;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Adjust size and shape of clickable circle image */
+.ad-image {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image round */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+#historyMsg {
+    height: 300px; /* Set a fixed height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding for better readability */
+    border: 1px solid #ccc; /* Add a border for better visual separation */
+    background-color: #f9f9f9; /* Set a background color */
+}

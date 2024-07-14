@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var hichat = new PumpfunCalls();
+    var hichat = new PYFE();
     hichat.init();
 });
 
-var PumpfunCalls = function() {
+var PYFE = function() {
     this.socket = null;
 };
 
-PumpfunCalls.prototype = {
+PYFE.prototype = {
     init: function() {
         var that = this;
         this.socket = io.connect();
@@ -19,7 +19,7 @@ PumpfunCalls.prototype = {
             document.getElementById('info').textContent = '!nickname is taken, choose another pls';
         });
         this.socket.on('loginSuccess', function() {
-            document.title = 'PumpfunCalls | ' + document.getElementById('nicknameInput').value;
+            document.title = 'PYFE | ' + document.getElementById('nicknameInput').value;
             document.getElementById('loginWrapper').style.display = 'none';
             document.getElementById('messageInput').focus();
         });
@@ -29,7 +29,7 @@ PumpfunCalls.prototype = {
         });
         this.socket.on('system', function(nickName, userCount, type) {
             var msg = nickName + (type == 'login' ? ' joined' : ' left');
-            that._displayNewMsg('PumpFunCallsBot ', msg, 'green');
+            that._displayNewMsg('PYFE ', msg, 'green');
             document.getElementById('status').textContent = userCount + (userCount > 1 ? ' users' : ' user') + ' online';
         });
         this.socket.on('newMsg', function(user, msg, color) {
